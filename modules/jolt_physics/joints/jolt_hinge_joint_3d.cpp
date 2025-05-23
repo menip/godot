@@ -52,6 +52,8 @@ double estimate_physics_step() {
 	const double step = 1.0 / engine->get_physics_ticks_per_second();
 	const double step_scaled = step * engine->get_time_scale();
 
+	// QUESTION: Would this also need to be updated for fixed_timestep to work?
+
 	return step_scaled;
 }
 

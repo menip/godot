@@ -1905,6 +1905,14 @@ double Engine::get_time_scale() {
 	return ::Engine::get_singleton()->get_time_scale();
 }
 
+void Engine::set_fixed_timestep(double p_timestep) {
+	::Engine::get_singleton()->set_fixed_timestep(p_timestep);
+}
+
+double Engine::get_fixed_timestep() {
+	return ::Engine::get_singleton()->get_fixed_timestep();
+}
+
 int Engine::get_frames_drawn() {
 	return ::Engine::get_singleton()->get_frames_drawn();
 }
@@ -2064,6 +2072,9 @@ void Engine::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("set_time_scale", "time_scale"), &Engine::set_time_scale);
 	ClassDB::bind_method(D_METHOD("get_time_scale"), &Engine::get_time_scale);
+
+	ClassDB::bind_method(D_METHOD("set_fixed_timestep", "timestep"), &Engine::set_fixed_timestep);
+	ClassDB::bind_method(D_METHOD("get_fixed_timestep"), &Engine::get_fixed_timestep);
 
 	ClassDB::bind_method(D_METHOD("get_frames_drawn"), &Engine::get_frames_drawn);
 	ClassDB::bind_method(D_METHOD("get_frames_per_second"), &Engine::get_frames_per_second);

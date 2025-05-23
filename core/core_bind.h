@@ -596,6 +596,9 @@ public:
 	void set_time_scale(double p_scale);
 	double get_time_scale();
 
+	void set_fixed_timestep(double p_timestep);
+	double get_fixed_timestep();
+
 	MainLoop *get_main_loop() const;
 
 	Dictionary get_version_info() const;

@@ -123,6 +123,14 @@ double Engine::get_unfrozen_time_scale() const {
 	return _time_scale;
 }
 
+void Engine::set_fixed_timestep(double p_timestep) {
+	_fixed_timestep = p_timestep;
+}
+
+double Engine::get_fixed_timestep() const {
+	return _fixed_timestep;
+}
+
 Dictionary Engine::get_version_info() const {
 	Dictionary dict;
 	dict["major"] = GODOT_VERSION_MAJOR;
